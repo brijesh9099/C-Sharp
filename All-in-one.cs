@@ -26,6 +26,7 @@ namespace Changebgcolor
 }
 */
 
+/*
 namespace Arrithmetic
 {
     class Arithmatic
@@ -127,16 +128,21 @@ namespace Arrithmetic
                 k++;
             } while (k != 10);
             */
-           
-            int [][] arr=new int [3][];
-
-            arr[0]=new int[3];
-            arr[1] = new int[2];
-            arr[2] = new int[1];
-
-            
-
-            
+*/
+   
+/*
+            namespace Foreach
+            {
+              class Program
+              {
+                static void Main(string[] args)
+                {
+                  string[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+                  foreach (string i in cars) 
+                  {
+                    Console.WriteLine(i);
+                  }
+*/ 
             Console.ReadKey();
 
         }
