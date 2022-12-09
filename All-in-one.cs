@@ -63,7 +63,7 @@ namespace Changebgcolor
 }
 */
 
-/*
+/*  Operators
 namespace Arrithmetic
 {
     class Arithmatic
@@ -140,7 +140,8 @@ namespace Arrithmetic
 
 
              } 
-              */
+*/
+/* loop's
             //for loop
             /*
             for (int i = 1; i <= 10; i++)
@@ -164,10 +165,8 @@ namespace Arrithmetic
                 Console.WriteLine(k);
                 k++;
             } while (k != 10);
-            */
-*/
-   
-/*
+
+//Foreach
             namespace Foreach
             {
               class Program
@@ -179,6 +178,7 @@ namespace Arrithmetic
                   {
                     Console.WriteLine(i);
                   }
+                  */
 */ 
     
 /*
