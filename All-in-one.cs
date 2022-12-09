@@ -4,6 +4,43 @@ using System.Linq;
 using System.Text;
 
 /*
+namespace hello_world
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Hello World");
+            Console.Read();
+        }
+    }
+}
+*/
+
+/*
+namespace Boxing_unboxing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 10;
+            object obj;
+
+            obj = a;
+            Console.Write("Boxing value :");
+            Console.WriteLine(obj);
+            int b = (int)obj;
+            Console.Write("Unboxing value :");
+            Console.Write(b);
+
+            Console.ReadKey();
+        }
+    }
+}
+
+
+/*
 namespace Changebgcolor
 {
     class Program
@@ -143,6 +180,36 @@ namespace Arrithmetic
                     Console.WriteLine(i);
                   }
 */ 
+    
+/*
+namespace Jagged_array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[][] jagged_arr = new int[4][];
+            
+            jagged_arr[0] = new int[] {1, 2, 3, 4};
+            jagged_arr[1] = new int[] {11, 34, 67};
+            jagged_arr[2] = new int[] {89, 23};
+            jagged_arr[3] = new int[] {0, 45, 78, 53, 99};
+            
+            for (int n = 0; n < jagged_arr.Length; n++)
+            {               
+                Console.Write("Row({0}): ", n);
+
+                for (int k = 0; k < jagged_arr[n].Length; k++)
+                {                  
+                    Console.Write("{0} ", jagged_arr[n][k]);
+                }
+                Console.WriteLine();
+            }
+            Console.ReadKey();
+        }
+    }
+}
+*/
             Console.ReadKey();
 
         }
