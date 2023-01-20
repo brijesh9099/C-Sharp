@@ -1,0 +1,51 @@
+private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\stud\Documents\bt.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            cn.Open();
+            String sql = "insert into stud values('"+textBox1.Text+"','"+textBox2.Text+"')";
+            SqlCommand cmd = new SqlCommand(sql,cn);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("inserted");
+            cn.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\stud\Documents\bt.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            cn.Open();
+            String sql = " Update stud set name='" + textBox1.Text + "',rollno = '" + textBox2.Text + "' where rollno = '" + textBox2.Text + "'";
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("updated");
+            cn.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\stud\Documents\bt.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            cn.Open();
+            String sql = " delete from stud where rollno = '" + textBox2.Text + "'";
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("deleted");
+            cn.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\stud\Documents\bt.mdf;Integrated Security=True;Connect Timeout=30;User Instance=True");
+            cn.Open();
+            String sql = "select * from stud";
+            SqlCommand cmd = new SqlCommand(sql, cn);
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dataGridView1.DataSource = dt;
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("selected");
+            cn.Close();
